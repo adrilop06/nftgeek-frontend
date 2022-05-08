@@ -162,6 +162,7 @@ export default function CreatePost() {
                   className="block text-sm font-medium text-black"
                 >
                   Contenido
+                  
                 </label>
                 {/* body */}
                 <textarea

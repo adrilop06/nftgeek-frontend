@@ -51,9 +51,9 @@ const News = () =>{
                             </ExternalLink>
                             <div className="mt-3 bg-white p-2 rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
                                 <div className="">
-                                    <Link to={`/https://es.investing.com${news?.link}`}>
+                                    <ExternalLink href={`https://es.investing.com/${news?.link}`} target="_blank">
                                         <h2 href="#" className="text-gray-900 font-bold text-lg mb-2 hover:text-indigo-600 transition duration-500 ease-in-out line-clamp-2">{news?.alt} </h2>
-                                    </Link>
+                                    </ExternalLink>
                                     <p className="text-gray-700 text-xs mt-2 line-clamp-5">{news.summary}</p>
                                 </div>
                             </div>

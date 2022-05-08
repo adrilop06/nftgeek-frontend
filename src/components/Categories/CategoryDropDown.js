@@ -18,7 +18,7 @@ const CategoryDropDown = props => {
 
   const allCategories = categoryList?.map(category => {
     return {
-      label: category?.name,
+      label: category?.name?.toLowerCase(),
       value: category?._id,
     };
   });

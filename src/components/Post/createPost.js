@@ -39,9 +39,9 @@ export default function CreatePost() {
       const data = {
         title: values?.title,
         body: values?.body,
-        category: values?.category?.label.toLowerCase(),
-        tag: values?.tag.label.toLowerCase(),
-        image: values?.image.toLowerCase(),
+        category: values?.category?.label,
+        tag: values?.tag.label,
+        image: values?.image,
       };
       
       

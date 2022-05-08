@@ -14,7 +14,9 @@ export const fetchCategoriesAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     //http call
@@ -40,7 +42,9 @@ export const fetchOneCategoryAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     //http call

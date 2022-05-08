@@ -7,11 +7,18 @@ import mainUrl from "../../../utils/mainUrl";
 export const scrapAction = createAsyncThunk(
     "market/nft",
     async (test, { rejectWithValue, getState, dispatch }) => {
-     
-    
+      
+      const config = {
+        headers: {
+  
+           "Access-Control-Allow-Headers": "*",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "*"
+        },
+      };
       //http call
       try {
-        const { data } = await axios.get(`${mainUrl}/api/market`);
+        const { data } = await axios.get(`${mainUrl}/api/market`, config);
         console.log(data)
         return data;
       } catch (error) {

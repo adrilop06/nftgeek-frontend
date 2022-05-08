@@ -44,7 +44,9 @@ export const fetchTagAction = createAsyncThunk(
     const config = {
       headers: {
   
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     //http call
@@ -67,7 +69,9 @@ export const fetchOneTagAction = createAsyncThunk(
     const config = {
       headers: {
 
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     //http call
@@ -93,7 +97,9 @@ export const updateTagAction = createAsyncThunk(
     const config = {
       headers: {
 
-        'Access-Control-Allow-Origin':'*'
+         "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     //http call
@@ -121,7 +127,9 @@ export const fetchTagDetailsAction = createAsyncThunk(
     const config = {
       headers: {
 
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {

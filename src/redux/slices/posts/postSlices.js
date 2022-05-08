@@ -19,7 +19,9 @@ export const createPostAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -53,7 +55,9 @@ export const updatePostAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -83,7 +87,9 @@ export const removePostAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -109,8 +115,9 @@ export const fetchPostsGamesAction = createAsyncThunk(
   async (post, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -132,7 +139,9 @@ export const fetchPostsLearningAction = createAsyncThunk(
     const config = {
       headers: {
 
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -155,7 +164,9 @@ export const fetchPostsUserAction = createAsyncThunk(
     const config = {
       headers: {
 
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -178,7 +189,9 @@ export const fetchAllPostsAction = createAsyncThunk(
     const config = {
       headers: {
 
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -200,7 +213,9 @@ export const fetchPostsTagAction = createAsyncThunk(
     const config = {
       headers: {
 
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -223,7 +238,9 @@ export const fetchPostsSearchAction = createAsyncThunk(
     const config = {
       headers: {
 
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -249,7 +266,9 @@ export const postsLikes = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -271,7 +290,9 @@ export const bookmarkPostAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -290,8 +311,9 @@ export const fetchInsidePostAction = createAsyncThunk(
   async (id, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-
-        'Access-Control-Allow-Origin':'*'
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {

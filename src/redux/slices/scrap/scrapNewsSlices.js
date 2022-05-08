@@ -7,11 +7,17 @@ import mainUrl from "../../../utils/mainUrl";
 export const scrapNewsAction = createAsyncThunk(
     "news/list",
     async (test, { rejectWithValue, getState, dispatch }) => {
-
-      console.log("yesd");
+      const config = {
+        headers: {
+  
+           "Access-Control-Allow-Headers": "*",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "*"
+        },
+      };
       //http call
       try {
-        const { data } = await axios.get(`${mainUrl}/api/news`);
+        const { data } = await axios.get(`${mainUrl}/api/news`, config);
         console.log(data)
         return data;
       } catch (error) {

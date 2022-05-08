@@ -9,7 +9,9 @@ export const fetchMarketAction = createAsyncThunk(
       const config = {
           headers: {
               'Content-Type':'application/json',
-              'Access-Control-Allow-Origin':'*'
+              "Access-Control-Allow-Headers": "*",
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Methods": "*"
           },
         };
     //http call

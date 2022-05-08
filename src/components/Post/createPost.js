@@ -39,7 +39,7 @@ export default function CreatePost() {
       const data = {
         title: values?.title,
         body: values?.body,
-        category: values?.category?.label.toLowerCase(),
+        category: values?.category?.label,
         tag: values?.tag.label,
         image: values?.image,
       };
@@ -47,9 +47,9 @@ export default function CreatePost() {
       
       //dispatch(createTagAction(data.tag));
 
-      
-      dispatch(createPostAction(data));
       dispatch(createTagAction(data.tag));
+      dispatch(createPostAction(data));
+      
       //
       
     },

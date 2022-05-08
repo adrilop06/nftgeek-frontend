@@ -15,6 +15,7 @@ export const createTagAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
+        'Access-Control-Allow-Origin':'*'
       },
     };
     //http call
@@ -40,10 +41,15 @@ export const createTagAction = createAsyncThunk(
 export const fetchTagAction = createAsyncThunk(
   "tag/list",
   async (tag, { rejectWithValue, getState, dispatch }) => {
-   
+    const config = {
+      headers: {
+        Authorization: `GEEK ${userAuth?.token}`,
+        'Access-Control-Allow-Origin':'*'
+      },
+    };
     //http call
     try {
-      const { data } = await axios.get(`${mainUrl}/api/tag`);
+      const { data } = await axios.get(`${mainUrl}/api/tag`, config);
       return data;
     } catch (error) {
       if (!error?.response) {
@@ -58,10 +64,15 @@ export const fetchTagAction = createAsyncThunk(
 export const fetchOneTagAction = createAsyncThunk(
   "tag/info",
   async (slug, { rejectWithValue, getState, dispatch }) => {
-   
+    const config = {
+      headers: {
+        Authorization: `GEEK ${userAuth?.token}`,
+        'Access-Control-Allow-Origin':'*'
+      },
+    };
     //http call
     try {
-      const { data } = await axios.get(`${mainUrl}/api/tag/${slug}`);
+      const { data } = await axios.get(`${mainUrl}/api/tag/${slug}`, config);
       return data;
     } catch (error) {
       if (!error?.response) {
@@ -82,8 +93,8 @@ export const updateTagAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
+        'Access-Control-Allow-Origin':'*'
       },
-      
     };
     //http call
     try {
@@ -107,8 +118,14 @@ export const updateTagAction = createAsyncThunk(
 export const fetchTagDetailsAction = createAsyncThunk(
   "tag/contain",
   async (slug, { rejectWithValue, getState, dispatch }) => {
+    const config = {
+      headers: {
+        Authorization: `GEEK ${userAuth?.token}`,
+        'Access-Control-Allow-Origin':'*'
+      },
+    };
     try {
-      const { data } = await axios.get(`${mainUrl}/api/tag/${slug}`);
+      const { data } = await axios.get(`${mainUrl}/api/tag/${slug}`, config);
       return data;
     } catch (error) {
       if (!error?.response) {

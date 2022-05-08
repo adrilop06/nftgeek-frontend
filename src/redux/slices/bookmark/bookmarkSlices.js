@@ -15,6 +15,7 @@ export const createBookmarkAction = createAsyncThunk(
       const config = {
         headers: {
           Authorization: `GEEK ${userAuth?.token}`,
+          'Access-Control-Allow-Origin':'*'
         },
       };
       try {
@@ -40,6 +41,7 @@ export const updateBookmarkAction = createAsyncThunk(
       const config = {
         headers: {
           Authorization: `GEEK ${userAuth?.token}`,
+          'Access-Control-Allow-Origin':'*'
         },
       };
       try {
@@ -62,6 +64,9 @@ export const updateBookmarkAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
+
+          'Access-Control-Allow-Origin':'*'
+
       },
     };
     //http call

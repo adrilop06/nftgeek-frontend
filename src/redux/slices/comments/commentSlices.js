@@ -12,6 +12,7 @@ export const createCommentAction = createAsyncThunk(
       const config = {
         headers: {
           Authorization: `GEEK ${userAuth?.token}`,
+          'Access-Control-Allow-Origin':'*'
         },
       };
       try {
@@ -38,6 +39,7 @@ export const deleteCommentAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
+        'Access-Control-Allow-Origin':'*'
       },
     };
     try {

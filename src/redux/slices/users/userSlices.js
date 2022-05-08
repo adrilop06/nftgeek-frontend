@@ -10,6 +10,8 @@ export const registerUserAction = createAsyncThunk(
   async (user, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
+        
+        'Access-Control-Allow-Origin':'*',
         "Content-Type": "application/json",
       },
     };
@@ -41,12 +43,14 @@ export const registerUserAction = createAsyncThunk(
 //LOGIN USER
 export const loginUserAction = createAsyncThunk( 'user/login', async (
     user, {rejectWithValue, getState, dispatch}) => {
-        //give the header
-        const config = {
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
+      const config = {
+        headers: {
+          Authorization: `GEEK ${userAuth?.token}`,
+          'Access-Control-Allow-Origin':'*',
+          "Content-Type": "application/json",
+        },
+      };
+      
     try {
         const { data } = await axios.post(
             `${mainUrl}/api/users/login`,
@@ -76,6 +80,7 @@ export const fetchUserAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
+        'Access-Control-Allow-Origin':'*'
       },
     };
     //http call

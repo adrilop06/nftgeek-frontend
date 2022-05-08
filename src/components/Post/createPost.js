@@ -135,7 +135,7 @@ export default function CreatePost() {
                 <div className="w-24 flex px-0 py-4 cursor-pointer">
                 <Dropzone
                     onBlur={formik.handleBlur("image")}
-                    accept="file/jpeg, file/png"
+                    accept="image/jpeg, image/png"
                     onDrop={acceptedFiles => {
                       formik.setFieldValue("image", acceptedFiles[0]);
                     }}

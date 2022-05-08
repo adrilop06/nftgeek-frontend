@@ -66,7 +66,7 @@ export const fetchOneTagAction = createAsyncThunk(
   async (slug, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };
@@ -92,7 +92,7 @@ export const updateTagAction = createAsyncThunk(
     const { userAuth } = user;
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };
@@ -120,7 +120,7 @@ export const fetchTagDetailsAction = createAsyncThunk(
   async (slug, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };

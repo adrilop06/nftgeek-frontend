@@ -109,7 +109,7 @@ export const fetchPostsGamesAction = createAsyncThunk(
   async (post, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };
@@ -154,7 +154,7 @@ export const fetchPostsUserAction = createAsyncThunk(
   async (user, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };
@@ -177,7 +177,7 @@ export const fetchAllPostsAction = createAsyncThunk(
   async (post, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };
@@ -199,7 +199,7 @@ export const fetchPostsTagAction = createAsyncThunk(
   async (slug, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };
@@ -222,7 +222,7 @@ export const fetchPostsSearchAction = createAsyncThunk(
   async (title, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };
@@ -290,7 +290,7 @@ export const fetchInsidePostAction = createAsyncThunk(
   async (id, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };

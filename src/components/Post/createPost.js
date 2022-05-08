@@ -41,7 +41,7 @@ export default function CreatePost() {
         body: values?.body,
         category: values?.category?.label.toLowerCase(),
         tag: values?.tag.label.toLowerCase(),
-        image: values?.image,
+        image: values?.image.toLowerCase(),
       };
       
       

@@ -137,7 +137,7 @@ export default function CreatePost() {
                     onBlur={formik.handleBlur("image")}
                     accept="image/jpeg, image/png"
                     onDrop={acceptedFiles => {
-                      formik.setFieldValue("image", acceptedFiles[0]);
+                      formik.setFieldValue("image", acceptedFiles[0]).toLowerCase();
                     }}
                   >
                     {({ getRootProps, getInputProps }) => (

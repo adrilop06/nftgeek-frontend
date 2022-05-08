@@ -24,7 +24,7 @@ export const registerUserAction = createAsyncThunk(
       formData.append('email', user?.email);
       formData.append('password', user?.password);
       formData.append('photo', user?.photo);
-      formData.append('bio', post?.bio);
+      formData.append('bio', user?.bio);
 
       const { data } = await axios.post(
         `${mainUrl}/api/users/registration`,

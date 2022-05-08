@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Select from 'react-select';
+import Select from 'react-select/creatable';
 import { fetchTagAction } from "../../redux/slices/tag/tagSlices";
 
 

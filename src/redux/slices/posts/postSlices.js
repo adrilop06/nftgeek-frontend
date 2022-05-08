@@ -131,7 +131,7 @@ export const fetchPostsLearningAction = createAsyncThunk(
   async (post, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+
         'Access-Control-Allow-Origin':'*'
       },
     };

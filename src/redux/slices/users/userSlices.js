@@ -45,7 +45,7 @@ export const loginUserAction = createAsyncThunk( 'user/login', async (
     user, {rejectWithValue, getState, dispatch}) => {
       const config = {
         headers: {
-          Authorization: `GEEK ${userAuth?.token}`,
+
           'Access-Control-Allow-Origin':'*',
           "Content-Type": "application/json",
         },

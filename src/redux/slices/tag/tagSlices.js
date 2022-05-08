@@ -43,7 +43,7 @@ export const fetchTagAction = createAsyncThunk(
   async (tag, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`,
+  
         'Access-Control-Allow-Origin':'*'
       },
     };

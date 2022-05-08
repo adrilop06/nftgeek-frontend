@@ -15,7 +15,7 @@ const postSchema = Yup.object({
   body: Yup.string().required("Se necesita un contenido"),
   category: Yup.object().required("Elige categoría"),
   tag: Yup.object().required("Elige etiqueta"),
-  image: Yup.object().required("Selecciona una imagen"),
+  image: Yup.string().required("Selecciona una imagen"),
 });
 
 

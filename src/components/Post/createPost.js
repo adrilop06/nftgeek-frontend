@@ -15,7 +15,7 @@ const postSchema = Yup.object({
   body: Yup.string().required("Se necesita un contenido"),
   category: Yup.object().required("Elige categoría"),
   tag: Yup.object().required("Elige etiqueta"),
-  image: Yup.string().required("Selecciona una imagen"),
+  //image: Yup.string().required("Selecciona una imagen"),
 });
 
 
@@ -33,7 +33,7 @@ export default function CreatePost() {
       body: "",
       category: "",
       tag: "",
-      image:"",
+      //image:"",
     },
     onSubmit: values => {
       const data = {
@@ -41,7 +41,7 @@ export default function CreatePost() {
         body: values?.body,
         category: values?.category?.label,
         tag: values?.tag.label,
-        image: values?.image,
+        //image: values?.image,
       };
       
       
@@ -128,35 +128,7 @@ export default function CreatePost() {
                 label = {formik.values.tag.label}
               />
               
-              <label className="block text-sm font-medium text-black"> 
-                Selecciona una imagen
-              </label>
-              <div className="flex w-full h-35 items-center justify-center">
-                <div className="w-24 flex px-0 py-4 cursor-pointer">
-                <Dropzone
-                    onBlur={formik.handleBlur("image")}
-                    accept="image/jpeg, image/png"
-                    onDrop={acceptedFiles => {
-                      formik.setFieldValue("image", acceptedFiles[0]);
-                    }}
-                  >
-                    {({ getRootProps, getInputProps }) => (
-                      <div className="container">
-                        <div
-                          {...getRootProps({
-                            onDrop: event => event.stopPropagation(),
-                          })}
-                        >
-                          <input {...getInputProps()} />
-                          <p className="text-black text-lg cursor-pointer hover:text-myblue-100">
-                            <PhotographIcon/>
-                          </p>
-                        </div>
-                      </div>
-                    )}
-                  </Dropzone>
-                </div>
-              </div>
+            
               <div>
                 <label
                   className="block text-sm font-medium text-black"

@@ -15,7 +15,7 @@ const postSchema = Yup.object({
   body: Yup.string().required("Se necesita un contenido"),
   category: Yup.object().required("Elige categoría"),
   tag: Yup.object().required("Elige etiqueta"),
-  image: Yup.string().required("Selecciona una imagen"),
+  image: Yup.object().required("Selecciona una imagen"),
 });
 
 
@@ -137,7 +137,7 @@ export default function CreatePost() {
                     onBlur={formik.handleBlur("image")}
                     accept="image/jpeg, image/png"
                     onDrop={acceptedFiles => {
-                      formik.setFieldValue("image", acceptedFiles[0]).toLowerCase();
+                      formik.setFieldValue("image", acceptedFiles[0]);
                     }}
                   >
                     {({ getRootProps, getInputProps }) => (

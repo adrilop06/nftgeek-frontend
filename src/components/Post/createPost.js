@@ -40,7 +40,7 @@ export default function CreatePost() {
         title: values?.title,
         body: values?.body,
         category: values?.category?.label,
-        tag: values?.tag.label,
+        tag: values?.tag.label.toLowerCase(),
         image: values?.image,
       };
       

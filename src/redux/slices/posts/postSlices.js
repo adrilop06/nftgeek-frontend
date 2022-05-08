@@ -20,7 +20,7 @@ export const createPostAction = createAsyncThunk(
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
         "Content-Type": "application/json",
-        
+
       },
     };
     try {
@@ -31,7 +31,6 @@ export const createPostAction = createAsyncThunk(
       formData.append('category', post?.category);
       formData.append('tag', post?.tag);
       formData.append('image', post?.image);
-      formData.append('bio', post?.bio);
 
       const { data } = await axios.post(`${mainUrl}/api/posts`, formData, config);
    

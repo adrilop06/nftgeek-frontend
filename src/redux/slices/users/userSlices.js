@@ -11,7 +11,7 @@ export const registerUserAction = createAsyncThunk(
     const config = {
       headers: {
         
-        'Access-Control-Allow-Origin':'*',
+
         "Content-Type": "application/json",
       },
     };
@@ -24,6 +24,7 @@ export const registerUserAction = createAsyncThunk(
       formData.append('email', user?.email);
       formData.append('password', user?.password);
       formData.append('photo', user?.photo);
+      formData.append('bio', post?.bio);
 
       const { data } = await axios.post(
         `${mainUrl}/api/users/registration`,

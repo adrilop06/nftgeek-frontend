@@ -15,7 +15,7 @@ const postSchema = Yup.object({
   body: Yup.string().required("Se necesita un contenido"),
   category: Yup.object().required("Elige categoría"),
   tag: Yup.object().required("Elige etiqueta"),
-  image: Yup.string().toLowerCase().required("Selecciona una imagen"),
+  image: Yup.string().required("Selecciona una imagen"),
 });
 
 
@@ -135,7 +135,7 @@ export default function CreatePost() {
                 <div className="w-24 flex px-0 py-4 cursor-pointer">
                 <Dropzone
                     onBlur={formik.handleBlur("image")}
-                    accept="image/jpeg, image/png"
+                    accept="file/jpeg, file/png"
                     onDrop={acceptedFiles => {
                       formik.setFieldValue("image", acceptedFiles[0]);
                     }}

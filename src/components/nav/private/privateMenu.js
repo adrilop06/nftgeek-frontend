@@ -31,14 +31,14 @@ const PrivateMenu = ({ isLogin }) => {
 const dispatch = useDispatch();
       const [title, setTitle] = useState("");
       const navigate = useNavigate();
-      
+      console.log(title);
       let inputHandler = (e) => {
         e.preventDefault();
 
 
         if (title.trim()) {
    
-          navigate(`/posts/results/${title}`);
+          navigate(`/posts/results/${title.title}`);
           refreshPage();
         } else {
           navigate("/");

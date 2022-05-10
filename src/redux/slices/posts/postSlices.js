@@ -242,10 +242,9 @@ export const fetchPostsSearchAction = createAsyncThunk(
     };
     try {
     
-      const { data } = await axios.get(`${mainUrl}/api/posts/results/title?title=${title}`, config);
+      const { data } = await axios.get(`${mainUrl}/api/posts/results/${title}`, config);
       return data;
         
-      
     } catch (error) {
       if (!error?.response) throw error;
       return rejectWithValue(error?.response?.data);

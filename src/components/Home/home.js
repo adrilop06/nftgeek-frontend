@@ -106,7 +106,7 @@ export default function Home  () {
                                     <button onClick={()=>
                                         {   
                                             dispatch(createBookmarkAction())
-                                            dispatch(bookmarkPostAction(post?.id))
+                                            dispatch(bookmarkPostAction(post?._id))
                                         }
                                         }>
                                     {post?.numMarks?.map((users) =>  users) == log ? (

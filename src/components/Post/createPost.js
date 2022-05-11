@@ -47,7 +47,7 @@ export default function CreatePost() {
       
       //dispatch(createTagAction(data.tag));
       dispatch(createPostAction(data));
-      //dispatch(createTagAction(data.tag));
+      dispatch(createTagAction(data.tag));
       
       
       //

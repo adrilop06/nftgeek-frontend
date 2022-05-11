@@ -36,7 +36,7 @@ export const createPostAction = createAsyncThunk(
    
 
       dispatch(resetAction());
-      res.send(data);
+      return data;
     } catch (error) {
       if (!error?.response) throw error;
       return rejectWithValue(error?.response?.data);

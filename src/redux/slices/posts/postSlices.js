@@ -20,6 +20,9 @@ export const createPostAction = createAsyncThunk(
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
         "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
 
       },
     };

@@ -8,11 +8,20 @@ import mainUrl from "../../../utils/mainUrl";
 export const fetchCategoriesAction = createAsyncThunk(
   "category/fetch",
   async (category, { rejectWithValue, getState, dispatch }) => {
-
-   
+    //get user token
+    const user = getState()?.users;
+    const { userAuth } = user;
+    const config = {
+      headers: {
+        Authorization: `GEEK ${userAuth?.token}`,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+      },
+    };
     //http call
     try {
-      const { data } = await axios.get(`${mainUrl}/api/category`);
+      const { data } = await axios.get(`${mainUrl}/api/category`, config);
       return data;
     } catch (error) {
       if (!error?.response) {
@@ -27,10 +36,20 @@ export const fetchCategoriesAction = createAsyncThunk(
 export const fetchOneCategoryAction = createAsyncThunk(
   "category/contain",
   async (id, { rejectWithValue, getState, dispatch }) => {
-
+    //get user token
+    const user = getState()?.users;
+    const { userAuth } = user;
+    const config = {
+      headers: {
+        Authorization: `GEEK ${userAuth?.token}`,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+      },
+    };
     //http call
     try {
-      const { data } = await axios.get(`${mainUrl}/api/category/${id}`);
+      const { data } = await axios.get(`${mainUrl}/api/category/${id}`, config);
       return data;
     } catch (error) {
       if (!error?.response) {

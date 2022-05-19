@@ -38,8 +38,9 @@ export const createPostAction = createAsyncThunk(
       const { data } = await axios.post(`${mainUrl}/api/posts`, formData, config);
    
 
-      dispatch(resetAction());
+      
       return data;
+      dispatch(resetAction());
     } catch (error) {
       if (!error?.response) throw error;
       return rejectWithValue(error?.response?.data);

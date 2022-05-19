@@ -8,9 +8,7 @@ import mainUrl from "../../../utils/mainUrl";
 export const fetchCategoriesAction = createAsyncThunk(
   "category/fetch",
   async (category, { rejectWithValue, getState, dispatch }) => {
-    //get user token
-    const user = getState()?.users;
-    const { userAuth } = user;
+
     const config = {
       headers: {
 
@@ -36,9 +34,7 @@ export const fetchCategoriesAction = createAsyncThunk(
 export const fetchOneCategoryAction = createAsyncThunk(
   "category/contain",
   async (id, { rejectWithValue, getState, dispatch }) => {
-    //get user token
-    const user = getState()?.users;
-    const { userAuth } = user;
+
     const config = {
       headers: {
 

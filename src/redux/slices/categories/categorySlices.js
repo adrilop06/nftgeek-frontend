@@ -9,17 +9,10 @@ export const fetchCategoriesAction = createAsyncThunk(
   "category/fetch",
   async (category, { rejectWithValue, getState, dispatch }) => {
 
-    const config = {
-      headers: {
-
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*"
-      },
-    };
+   
     //http call
     try {
-      const { data } = await axios.get(`${mainUrl}/api/category`, config);
+      const { data } = await axios.get(`${mainUrl}/api/category`);
       return data;
     } catch (error) {
       if (!error?.response) {
@@ -35,17 +28,9 @@ export const fetchOneCategoryAction = createAsyncThunk(
   "category/contain",
   async (id, { rejectWithValue, getState, dispatch }) => {
 
-    const config = {
-      headers: {
-
-        "Access-Control-Allow-Headers": "*",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*"
-      },
-    };
     //http call
     try {
-      const { data } = await axios.get(`${mainUrl}/api/category/${id}`, config);
+      const { data } = await axios.get(`${mainUrl}/api/category/${id}`);
       return data;
     } catch (error) {
       if (!error?.response) {

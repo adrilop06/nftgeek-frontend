@@ -161,7 +161,7 @@ export const fetchPostsLearningAction = createAsyncThunk(
 //fetch posts by user
 export const fetchPostsUserAction = createAsyncThunk(
   "post/user",
-  async (user, { rejectWithValue, getState, dispatch }) => {
+  async (id, { rejectWithValue, getState, dispatch }) => {
     //get user token
     const userId = getState()?.users;
     const { userAuth } = userId;
@@ -177,7 +177,7 @@ export const fetchPostsUserAction = createAsyncThunk(
     };
     try {
     
-      const { data } = await axios.get(`${mainUrl}/api/posts`, config);
+      const { data } = await axios.get(`${mainUrl}/api/posts/profile/id?id=${userAuth?._id}`, config);
         return data;
       
     } catch (error) {

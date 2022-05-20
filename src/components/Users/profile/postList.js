@@ -29,7 +29,7 @@ const PostList = () => {
         <>  
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-5">
-            {postUser?.user === log && postUser?.length <= 0 ? (
+            {postUser?.user.toString() === log && postUser?.length <= 0 ? (
                 <h1 className="text-lg text-center">Tu registro de publicaciones esta vacío</h1>
             ) :(
                 postUser?.map(post => (

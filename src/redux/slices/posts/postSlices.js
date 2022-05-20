@@ -18,7 +18,10 @@ export const createPostAction = createAsyncThunk(
     const { userAuth } = user;
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`
+        Authorization: `GEEK ${userAuth?.token}`,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -51,6 +54,9 @@ export const updatePostAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
 
       },
     };
@@ -81,7 +87,10 @@ export const removePostAction = createAsyncThunk(
     const { userAuth } = user;
     const config = {
       headers: {
-        Authorization: `GEEK ${userAuth?.token}`
+        Authorization: `GEEK ${userAuth?.token}`,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
       },
     };
     try {
@@ -105,11 +114,18 @@ export const removePostAction = createAsyncThunk(
 export const fetchPostsGamesAction = createAsyncThunk(
   "post/games",
   async (post, { rejectWithValue, getState, dispatch }) => {
+    const config = {
+      headers: {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+      },
+    };
 
     try {
      
       const games= "juegos";
-      const { data } = await axios.get(`${mainUrl}/api/posts?category=${games}`);
+      const { data } = await axios.get(`${mainUrl}/api/posts?category=${games}`, config);
         return data;
       
     } catch (error) {
@@ -122,11 +138,17 @@ export const fetchPostsGamesAction = createAsyncThunk(
 export const fetchPostsLearningAction = createAsyncThunk(
   "post/learning",
   async (post, { rejectWithValue, getState, dispatch }) => {
-
+    const config = {
+      headers: {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+      },
+    };
     try {
       
       const learning= "aprendizaje";
-      const { data } = await axios.get(`${mainUrl}/api/posts?category=${learning}`);
+      const { data } = await axios.get(`${mainUrl}/api/posts?category=${learning}`, config);
         return data;
       
     } catch (error) {
@@ -142,7 +164,6 @@ export const fetchPostsUserAction = createAsyncThunk(
   async (user, { rejectWithValue, getState, dispatch }) => {
     const config = {
       headers: {
-
         "Access-Control-Allow-Headers": "*",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "*"
@@ -165,10 +186,16 @@ export const fetchPostsUserAction = createAsyncThunk(
 export const fetchAllPostsAction = createAsyncThunk(
   "post/list",
   async (post, { rejectWithValue, getState, dispatch }) => {
-
+    const config = {
+      headers: {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+      },
+    };
     try {
    
-      const { data } = await axios.get(`${mainUrl}/api/posts`);
+      const { data } = await axios.get(`${mainUrl}/api/posts`, config);
         return data;
       
     } catch (error) {
@@ -182,11 +209,17 @@ export const fetchAllPostsAction = createAsyncThunk(
 export const fetchPostsTagAction = createAsyncThunk(
   "post/tag",
   async (slug, { rejectWithValue, getState, dispatch }) => {
-
+    const config = {
+      headers: {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+      },
+    };
     try {
      
       const s = "axie"
-      const { data } = await axios.get(`${mainUrl}/api/posts?slug=${s}`);
+      const { data } = await axios.get(`${mainUrl}/api/posts?slug=${s}`, config);
         return data;
       
     } catch (error) {
@@ -200,10 +233,16 @@ export const fetchPostsTagAction = createAsyncThunk(
 export const fetchPostsSearchAction = createAsyncThunk(
   `post/results`,
   async (title, { rejectWithValue, getState, dispatch }) => {
-
+    const config = {
+      headers: {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+      },
+    };
     try {
     
-      const { data } = await axios.get(`${mainUrl}/api/posts/results/title?title=${title}`);
+      const { data } = await axios.get(`${mainUrl}/api/posts/results/title?title=${title}`, config);
       return data;
         
       
@@ -224,6 +263,10 @@ export const postsLikes = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+
       },
     };
     try {
@@ -245,6 +288,10 @@ export const bookmarkPostAction = createAsyncThunk(
     const config = {
       headers: {
         Authorization: `GEEK ${userAuth?.token}`,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+    
       },
     };
     try {
@@ -261,9 +308,15 @@ export const bookmarkPostAction = createAsyncThunk(
 export const fetchInsidePostAction = createAsyncThunk(
   'post/contain', 
   async (id, { rejectWithValue, getState, dispatch }) => {
-
+    const config = {
+      headers: {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*"
+      },
+    };
     try {
-      const {data} = await axios.get(`${mainUrl}/api/posts/${id}`);
+      const {data} = await axios.get(`${mainUrl}/api/posts/${id}`, config);
       return data;
     } catch (error) {
       if(!error?.response) throw error;

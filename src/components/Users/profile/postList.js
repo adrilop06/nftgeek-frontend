@@ -12,13 +12,13 @@ const PostList = () => {
     const user = useSelector(state => state?.users);
     const { userAuth } = user;
     const log = userAuth?._id;
-    console.log(log, 'log');
+  
     const post = useSelector(state => state?.post);
     const { 
         postUser, likes, mark
     } = post;
 
-    console.log(postUser, "postUser");
+
 
     const dispatch = useDispatch();
 
@@ -34,7 +34,6 @@ const PostList = () => {
                 <h1 className="text-lg text-center">Tu registro de publicaciones esta vacío</h1>
             ) :(
                 postUser?.map(post => (
-              
             <div key={post?._id} className="flex flex-col col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 shadow-lg rounded-lg pb-2 mt-10">
                 <Link to={`/posts/${post?.id}`}>
                     <div className="h-56 bg-cover text-center overflow-hidden rounded-lg"  title="Image post">

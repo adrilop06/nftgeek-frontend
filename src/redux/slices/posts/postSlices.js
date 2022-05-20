@@ -162,8 +162,12 @@ export const fetchPostsLearningAction = createAsyncThunk(
 export const fetchPostsUserAction = createAsyncThunk(
   "post/user",
   async (user, { rejectWithValue, getState, dispatch }) => {
+    //get user token
+    const user = getState()?.users;
+    const { userAuth } = user;
     const config = {
       headers: {
+        Authorization: `GEEK ${userAuth?.token}`,
         "Access-Control-Allow-Headers": "*",
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "*"

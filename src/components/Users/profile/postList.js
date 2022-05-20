@@ -18,6 +18,7 @@ const PostList = () => {
         postUser, likes, mark
     } = post;
 
+    console.log(postUser, 1);
     const dispatch = useDispatch();
 
     useEffect(() => {

@@ -18,7 +18,7 @@ const PostList = () => {
         postUser, likes, mark
     } = post;
 
-    console.log(postUser.user, "postUser");
+    console.log(postUser, "postUser");
 
     const dispatch = useDispatch();
 

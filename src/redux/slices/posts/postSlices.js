@@ -178,7 +178,8 @@ export const fetchPostsUserAction = createAsyncThunk(
     try {
     
       const { data } = await axios.get(`${mainUrl}/api/profile/posts?id=${userAuth?._id}`, config);
-        return data;
+        //return data;
+        console.log(data);
       
     } catch (error) {
       if (!error?.response) throw error;

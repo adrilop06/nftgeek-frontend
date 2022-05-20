@@ -12,12 +12,13 @@ const PostList = () => {
     const user = useSelector(state => state?.users);
     const { userAuth } = user;
     const log = userAuth?._id;
-
+    console.log(log, 'log');
     const post = useSelector(state => state?.post);
     const { 
         postUser, likes, mark
     } = post;
 
+    console.log(postUser.user, "postUser");
 
     const dispatch = useDispatch();
 
@@ -29,7 +30,7 @@ const PostList = () => {
         <>  
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-5">
-            {postUser?.user.toString() === log && postUser?.length <= 0 ? (
+            {postUser?.length <= 0 ? (
                 <h1 className="text-lg text-center">Tu registro de publicaciones esta vacío</h1>
             ) :(
                 postUser?.map(post => (

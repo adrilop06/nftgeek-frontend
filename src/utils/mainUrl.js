@@ -1,4 +1,4 @@
-const mainUrl = 'https://nftgeek.herokuapp.com';
+const mainUrl = 'https://stark-mesa-25446.herokuapp.com';
 
 
 export default mainUrl;

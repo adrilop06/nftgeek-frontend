@@ -180,7 +180,9 @@ const InsidePost = () => {
             )}
             
            {/*comments */}
-          
+            <div className=" bg-white overflow-hidden">
+                <CommentList comments={postContain?.comments}></CommentList>
+            </div>
             
      
             {/*Create comments component */}

@@ -21,9 +21,7 @@ const CommentList =  ({ comments }) =>{
 
     //dispatch
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchInsidePostAction())
-    }, [dispatch, likes, marks]);
+
 
     return (
         <div>

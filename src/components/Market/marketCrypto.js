@@ -158,9 +158,9 @@ const MarketCrypto =  () =>{
                                     <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
                                     <AccordionItemHeading>
                                         <AccordionItemButton>
-                                        <td className="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                            <ChevronDownIcon className="w-4 stroke-gray-500 ml-auto"></ChevronDownIcon>
-                                        </td>
+                           
+                                                <ChevronDownIcon className="w-4 stroke-gray-500 ml-auto px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900"/>
+                                     
                                         </AccordionItemButton>
                                     
                                    
@@ -177,7 +177,7 @@ const MarketCrypto =  () =>{
                                         {values?.current_price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                     </td>
                                     </AccordionItemHeading>
-                                </tr>
+                                    </tr>
                                 
                                
                                 <AccordionItemPanel>

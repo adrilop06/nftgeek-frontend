@@ -10,7 +10,9 @@ import DateFormatter from '../../../utils/DateFormatter';
 
 
 const Profile =() => {
-   
+    const post = useSelector(state => state?.post);
+    const {likes, mark}= post;
+    
     const user = useSelector(state => state?.users);
     const { 
         userProfile, loading, appErr, serverErr
@@ -25,8 +27,7 @@ const Profile =() => {
         dispatch(fetchUserAction(id))
     }, [id, dispatch, likes, mark]);
 
-    const post = useSelector(state => state?.post);
-    const {likes, mark}= post;
+ 
 
 
     

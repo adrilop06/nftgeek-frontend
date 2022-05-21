@@ -14,9 +14,10 @@ const PostList = ({profile}) => {
     const {likes, mark}= post;
 
     const dispatch = useDispatch();
+
     useEffect(() => {
-        dispatch(postsLikes());
-    }, [dispatch, likes]);
+        dispatch(profile)
+    }, [id, dispatch, likes, mark]);
  
 
     return (
@@ -53,6 +54,7 @@ const PostList = ({profile}) => {
                     <div className="flex items-center ml-auto mr-2 mb-0">
                         <button onClick={()=>dispatch(postsLikes(post?.id))}>    
                             {post?.numLikes?.map((users) =>  users) == profile?._id ? (
+
                                 <HeartIcon className="w-6 ml-10 fill-red-500 stroke-0"/>
                             ) :(
                                 <HeartIcon className="w-6 ml-10"/>  

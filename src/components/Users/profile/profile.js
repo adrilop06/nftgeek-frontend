@@ -89,6 +89,7 @@ const Profile =() => {
                         </a>
                     </li>
                     <li class="mr-2">
+                        {userProfile?._id == id ? (
                         <a
                             className={
                             "text-xs font-bold uppercase px-5 py-3  block leading-normal " +
@@ -106,6 +107,9 @@ const Profile =() => {
                         >
                             Guardados
                         </a>
+                        ):(
+                            <h1 className="col-span-12 text-lg text-center">Los bookmarks son privados</h1>
+                        )}
                     </li>
                 </ul>
                 <div className="flex flex-wrap mt-20">

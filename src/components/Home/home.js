@@ -86,7 +86,7 @@ export default function Home  () {
                                 </div>
                             </div>
                             <div className="flex items-center ml-4 mt-auto">
-                                <Link to={`/profile/${post?.user}`}><img className="w-10 h-10 rounded-full mr-4" src={post?.user?.photo} alt="User Photo"/></Link>
+                                <Link to={`/profile/${post?.user?.id}`}><img className="w-10 h-10 rounded-full mr-4" src={post?.user?.photo} alt="User Photo"/></Link>
                                 <div className="text-md w-100 flex-1">
                                     <Link to={`/profile/${post?.user?.id}`} className="text-gray-900">{post?.user?.userName}</Link>
                                     <p className="text-gray-600"><DateFormatter date={post?.createdAt}/></p>
@@ -141,7 +141,7 @@ export default function Home  () {
                                     <h2 href="#" className="text-gray-900 font-medium hover:text-indigo-600 leading-none line-clamp-2">{post?.title}</h2>
                                 </Link>
                                 <div className="flex items-center mt-2">
-                                    <Link to={`/profile/${post?.user}`}><img className="w-5 h-5 rounded-full mr-4" src={post?.user.photo} alt="User photo"/></Link>
+                                    <Link to={`/profile/${post?.user?.id}`}><img className="w-5 h-5 rounded-full mr-4" src={post?.user.photo} alt="User photo"/></Link>
                                     <div className="text-xs w-100 flex-1">
                                         <Link to={`/profile/${post?.user?.id}`} className="text-gray-900">{post?.user?.userName}</Link>
                                         <p className="text-gray-600"><DateFormatter date={post?.createdAt}/></p>
@@ -265,7 +265,7 @@ export default function Home  () {
                                 <div className="flex items-center mt-2 md:mt-12">
                                     <Link to={`/profile/${post?.user?.id}`}><img className="w-5 h-5 lg:w-10 lg:h-10 rounded-full mr-4" src={post?.user?.photo} alt="Users photo"/></Link>
                                     <div className="text-xs lg:text-base w-100 flex-1">
-                                        <Link to={`/profile/${post?.user}`} href="/" className="text-gray-900 ">{post?.user?.userName}</Link>
+                                        <Link to={`/profile/${post?.user?.id}`} href="/" className="text-gray-900 ">{post?.user?.userName}</Link>
                                         <p className="text-gray-600"><DateFormatter date={post?.createdAt}/></p>
                                     </div>
                                     <div className="flex items-center ml-auto mr-2">

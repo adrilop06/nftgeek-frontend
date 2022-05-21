@@ -40,9 +40,9 @@ export default function LearningCategory() {
                         </div>
                     </Link>
                     <div className="">
-                        <a href="#" className="text-xs m-2 text-myblue-100 uppercase font-medium mb-3 flex items-center hover:text-gray-900 transition duration-500 ease-in-out">
+                        <Link to={`/tag/${post?.slug}`} className="text-xs m-2 text-myblue-100 uppercase font-medium mb-3 flex items-center hover:text-gray-900 transition duration-500 ease-in-out">
                             {post?.tag}
-                        </a>
+                        </Link>
                         <Link to={`/posts/${post?.id}`}>
                             <h2 href="#" className="text-gray-900 m-2 font-bold text-lg hover:text-indigo-600 transition duration-500 ease-in-out line-clamp-2">{post?.title} </h2>
                         </Link>
@@ -50,10 +50,10 @@ export default function LearningCategory() {
                     </div>
     
                     <div className="flex items-center ml-4 mt-auto">
-                        <a href="/"><img className="w-10 h-10 rounded-full mr-4" src={post?.userImage} alt="User Photo"/></a>
+                    <Link to={`/profile/${post?.user?.id}`}><img className="w-10 h-10 rounded-full mr-4" src={post?.userImage} alt="User Photo"/></Link>
                         <div className="text-md w-100 flex-1">
-                            <a href="/" className="text-gray-900">{post?.user?.firstName} {post?.user?.lastName}</a>
-                            <p className="text-gray-600">Aug 9</p>
+                            <Link to={`/profile/${post?.user?.id}`} className="text-gray-900">{post?.user?.userName}</Link>
+                            <p className="text-gray-600"><DateFormatter date={post?.createdAt}/></p>
                         </div>
                         <div className="flex items-center ml-auto mr-2">
                             <button onClick={()=>dispatch(postsLikes(post?.id))}>

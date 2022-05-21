@@ -42,9 +42,9 @@ const PostList = ({profile}) => {
                 </div>
 
                 <div className="flex items-center ml-4 mt-auto">
-                    <a href="/"><img className="w-10 h-10 rounded-full mr-4" src={post?.userImage} alt="User Photo"/></a>
+                    <Link to={`/profile/${post?.user?.id}`}><img className="w-10 h-10 rounded-full mr-4" src={post?.userImage} alt="User Photo"/></Link>
                     <div className="text-md w-100 flex-1">
-                        <a href="/" className="text-gray-900">{post?.userName}</a>
+                        <Link to={`/profile/${post?.user?.id}`} className="text-gray-900">{post?.user?.userName}</Link>
                         <p className="text-gray-600"><DateFormatter date={post?.createdAt}/></p>
                     </div>
                     <div className="flex items-center ml-auto mr-2 mb-0">

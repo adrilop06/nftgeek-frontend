@@ -24,7 +24,7 @@ const PostList = () => {
 
     useEffect(() => {
         dispatch(fetchPostsUserAction(log))
-    }, [ dispatch, likes, mark]);
+    }, [ dispatch,postUser, likes, mark]);
 
     return (
         <>  

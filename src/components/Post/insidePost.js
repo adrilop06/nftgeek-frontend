@@ -107,16 +107,18 @@ const InsidePost = () => {
                     </div>
                 {/* User */}
                     <div className="flex items-center pt-14 mb-14">
+                        <Link to={`/profile/${postContain?.user?.id}`}>
                         <img
                             className="mr-8 w-10 h-10 md:w-20 md:h-20 rounded-full"
                             src={postContain?.user?.photo }
                             alt=""
                         />
+                        </Link>
                         <div className="text-left">
                             <h4 className="mb-1 text-xs sm:text-sm md:text-2xl">
-                            <span className="text-xl text-xs sm:text-sm md:text-2xl text-black">
+                            <Link to={`/profile/${postContain?.user?.id}`} className="text-xl text-xs sm:text-sm md:text-2xl text-black">
                                 {postContain?.user?.userName} 
-                            </span>
+                            </Link>
                             </h4>
                             <p className="text-gray-500 text-xs sm:text-sm">
                                 <DateFormatter date={postContain?.createdAt}/>

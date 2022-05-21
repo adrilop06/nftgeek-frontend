@@ -157,9 +157,9 @@ const MarketCrypto =  () =>{
                                 <h1>No values Found</h1>
                             ): (
                                 marketList?.slice(0, 100).map(values => (
+                                    <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
                                     <Accordion>
                                     <AccordionItem>
-                                        <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
                                         <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                             <AccordionItemHeading>
                                                 <AccordionItemButton>
@@ -180,7 +180,7 @@ const MarketCrypto =  () =>{
                                             {values?.current_price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                         </td>
                                     
-                                        </tr>
+                                        
                                     
                                 
                                     <AccordionItemPanel>
@@ -226,6 +226,7 @@ const MarketCrypto =  () =>{
                                     
                                 </AccordionItem>
                                 </Accordion>
+                                </tr>
                                 ))
                             )}
                         </tbody>

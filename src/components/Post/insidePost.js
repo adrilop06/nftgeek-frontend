@@ -15,7 +15,7 @@ const InsidePost = () => {
     const { 
         postContain, loading, appErr, serverErr, likes, mark, removed, 
     } = post;
-
+    console.log(postContain);
     const { id } = useParams();
     //comment
     const comment = useSelector(state => state.comment);
@@ -24,11 +24,7 @@ const InsidePost = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchInsidePostAction(id))
-    }, [id, dispatch, likes, mark]);
-
-    useEffect(() => {
-        dispatch(CreateComments())
-    }, [commentCreated, commentDeleted]);
+    }, [id, dispatch, likes, mark, commentCreated, commentDeleted]);
 
    
     

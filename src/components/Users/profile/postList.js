@@ -10,20 +10,17 @@ import { fetchUserAction } from '../../../redux/slices/users/userSlices';
 const PostList = ({profile}) => {
 
    
-
+    const post = useSelector(state => state?.post);
+    const {likes, mark}= post;
 
     const dispatch = useDispatch();
-
-
-
-
-
-    
-    /*
     useEffect(() => {
-        dispatch(fetchPostsUserAction(log))
-    }, [ dispatch, ]);
-*/
+        dispatch(postsLikes());
+    }, [dispatch, likes]);
+    useEffect(() => {
+        dispatch(bookmarkPostAction());
+    }, [dispatch, mark]);
+
     return (
         <>  
 

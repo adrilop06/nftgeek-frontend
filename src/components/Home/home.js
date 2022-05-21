@@ -11,15 +11,17 @@ import { fetchTagAction } from '../../redux/slices/tag/tagSlices';
 
 export default function Home  () {
 
+
+
+    const user = useSelector(state => state?.users);
+    const { userAuth } = user;
+    const log = userAuth?._id;
+
     //select post from store
     const post = useSelector(state => state?.post);
     const { 
         postListGames, postListLearning, postList, loading, appErr, serverErr, likes, mark
     } = post;
-
-    const user = useSelector(state => state?.users);
-    const { userAuth } = user;
-    const log = userAuth?._id;
 
     const tags = useSelector(state => state.tag);
     const { 
@@ -45,7 +47,6 @@ export default function Home  () {
         dispatch(fetchTagAction());
     }, [dispatch]);
 
-    
     return (
         <>    
 
@@ -91,11 +92,13 @@ export default function Home  () {
                                     <p className="text-gray-600"><DateFormatter date={post?.createdAt}/></p>
                                 </div>
                                 <div className="flex items-center ml-auto mr-2">
-                                    <button onClick={()=>dispatch(postsLikes(post?._id))}>
+                                    <button onClick={()=>dispatch(postsLikes(post?.id))}>
                                 
-  
+                                    {post?.numLikes?.map((users) =>  users) == log ? (
                                         <HeartIcon className="w-6 ml-10 fill-red-500 stroke-0"/>
-                                
+                                    ) :(
+                                        <HeartIcon className="w-6 ml-10"/>  
+                                    )}
                                     </button>
                                     <p className="text-black text-sm">{post?.numLikes?.length}</p>
                                     <ChatAltIcon className="w-6 ml-5"/>

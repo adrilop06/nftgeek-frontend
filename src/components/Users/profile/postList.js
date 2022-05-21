@@ -10,9 +10,15 @@ import { fetchUserAction } from '../../../redux/slices/users/userSlices';
 const PostList = () => {
 
     const user = useSelector(state => state?.users);
-    const { userAuth, userProfile, loading, appErr, serverErr} = user;
-    const log = userAuth?._id;
-  
+    const { userProfile, loading, appErr, serverErr} = user;
+   
+    const { id } = useParams();
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchUserAction(id))
+    }, [id, dispatch, likes, mark]);
     
     const post = useSelector(state => state?.post);
     const { 
@@ -21,11 +27,7 @@ const PostList = () => {
 
 
 
-    const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(fetchUserAction(log))
-    }, [dispatch, likes, mark]);
     
     /*
     useEffect(() => {

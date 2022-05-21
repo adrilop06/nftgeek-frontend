@@ -10,15 +10,11 @@ import DateFormatter from '../../../utils/DateFormatter';
 const PostList = ({profile}) => {
 
    
-    const post = useSelector(state => state?.post);
-    const {likes, mark}= post;
+
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(profile)
-    }, [id, dispatch, likes, mark]);
- 
+
 
     return (
         <>  

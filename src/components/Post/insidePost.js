@@ -15,7 +15,7 @@ const InsidePost = () => {
     const { 
         postContain, loading, appErr, serverErr, likes, mark, removed, 
     } = post;
-    console.log(postContain);
+
     const { id } = useParams();
     //comment
     const comment = useSelector(state => state.comment);

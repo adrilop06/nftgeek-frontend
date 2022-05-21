@@ -12,14 +12,15 @@ import DateFormatter from '../../../utils/DateFormatter';
 const Profile =() => {
     const post = useSelector(state => state?.post);
     const {likes, mark}= post;
-    
+
+    const { id } = useParams();
+
     const user = useSelector(state => state?.users);
     const { 
-        userProfile, loading, appErr, serverErr
+        userProfile, loading, appErr, serverErr, userAuth: { _id }
     } = user;
     
 
-    const { id } = useParams();
 
     const dispatch = useDispatch();
     
@@ -28,6 +29,11 @@ const Profile =() => {
     }, [id, dispatch, likes, mark]);
 
  
+     //chech the user id
+     var authorPost = null;
+     if(user.userAuth != null){
+         authorPost = userProfile?._id=== user.userAuth._id;
+     } 
 
 
     
@@ -89,7 +95,7 @@ const Profile =() => {
                         </a>
                     </li>
                     <li class="mr-2">
-                        {userProfile?._id == id ? (
+                        
                         <a
                             className={
                             "text-xs font-bold uppercase px-5 py-3  block leading-normal " +
@@ -107,9 +113,7 @@ const Profile =() => {
                         >
                             Guardados
                         </a>
-                        ):(
-                            <h1 className="col-span-12 text-lg text-center">Los bookmarks son privados</h1>
-                        )}
+                      
                     </li>
                 </ul>
                 <div className="flex flex-wrap mt-20">
@@ -120,7 +124,11 @@ const Profile =() => {
                                     <PostList profile={userProfile}/>
                                 </div>
                                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                                    <BookmarkList/>
+                                    {authorPost == true ? (
+                                        <BookmarkList/>
+                                    ):(
+                                        <h1 className="col-span-12 text-lg text-center">Los bookmarks son privados</h1>
+                                    )}
                                 </div>
                             </div>
                         </div>

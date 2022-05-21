@@ -1,5 +1,5 @@
 import React from "react";
-import { BookmarkIcon, ChatAltIcon, HeartIcon, ChatAltIcon, BookmarkIcon } from "@heroicons/react/outline";
+import { BookmarkIcon, ChatAltIcon, HeartIcon } from "@heroicons/react/outline";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";

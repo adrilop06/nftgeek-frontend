@@ -14,9 +14,7 @@ const PostList = ({profile}) => {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch()
-    }, [dispatch, likes, mark]);
+    useEffect(() =>  [dispatch, likes, mark]);
     
     const post = useSelector(state => state?.post);
     const { 

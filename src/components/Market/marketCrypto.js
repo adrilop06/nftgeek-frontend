@@ -160,15 +160,7 @@ const MarketCrypto =  () =>{
                                     <Accordion>
                                     <AccordionItem>
                                         <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
-                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        <AccordionItemHeading>
-                                            <AccordionItemButton>
-                                                
-                                                    <ChevronDownIcon className="w-4 stroke-gray-500 ml-auto"></ChevronDownIcon>
-                                                
-                                            </AccordionItemButton>
-                                        </AccordionItemHeading>
-                                        </td>
+                                       
                                         
                                         <td className="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap">
                                             <div className="flex items-center ml-auto">

@@ -7,18 +7,16 @@ import {createBookmarkAction } from '../../../redux/slices/bookmark/bookmarkSlic
 import DateFormatter from '../../../utils/DateFormatter';
 import { fetchUserAction } from '../../../redux/slices/users/userSlices';
 
-const PostList = () => {
+const PostList = ({profile}) => {
 
-    const user = useSelector(state => state?.users);
-    const { userProfile, loading, appErr, serverErr} = user;
    
-    const { id } = useParams();
+
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(fetchUserAction(id))
-    }, [id, dispatch, likes, mark]);
+        dispatch()
+    }, [dispatch, likes, mark]);
     
     const post = useSelector(state => state?.post);
     const { 
@@ -38,11 +36,11 @@ const PostList = () => {
         <>  
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-5">
-            {userProfile?.posts?.length <= 0 ? (
+            {profile?.posts?.length <= 0 ? (
                 <h1 className="text-lg text-center">Tu registro de publicaciones esta vacío</h1>
             ) :
             (
-                userProfile?.posts?.map(post => (
+                profile?.posts?.map(post => (
             <div key={post?._id} className="flex flex-col col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 shadow-lg rounded-lg pb-2 mt-10">
                 <Link to={`/posts/${post?.id}`}>
                     <div className="h-56 bg-cover text-center overflow-hidden rounded-lg"  title="Image post">
@@ -67,7 +65,7 @@ const PostList = () => {
                     </div>
                     <div className="flex items-center ml-auto mr-2 mb-0">
                         <button onClick={()=>dispatch(postsLikes(post?.id))}>    
-                            {post?.numLikes?.map((users) =>  users) == id ? (
+                            {post?.numLikes?.map((users) =>  users) == profile?._id ? (
                                 <HeartIcon className="w-6 ml-10 fill-red-500 stroke-0"/>
                             ) :(
                                 <HeartIcon className="w-6 ml-10"/>  
@@ -82,7 +80,7 @@ const PostList = () => {
                                 dispatch(bookmarkPostAction(post?.id))
                             }
                         }>
-                            {post?.numMarks?.map((users) =>  users) == id ? (
+                            {post?.numMarks?.map((users) =>  users) == profile?._id ? (
                                 <BookmarkIcon className="w-6  ml-5 fill-red-500 stroke-0"/>
                             ) :(
                                 <BookmarkIcon className="w-6  ml-5"/>

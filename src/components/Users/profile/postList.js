@@ -67,7 +67,7 @@ const PostList = () => {
                     </div>
                     <div className="flex items-center ml-auto mr-2 mb-0">
                         <button onClick={()=>dispatch(postsLikes(post?.id))}>    
-                            {post?.numLikes?.map((users) =>  users) == log ? (
+                            {post?.numLikes?.map((users) =>  users) == id ? (
                                 <HeartIcon className="w-6 ml-10 fill-red-500 stroke-0"/>
                             ) :(
                                 <HeartIcon className="w-6 ml-10"/>  
@@ -82,7 +82,7 @@ const PostList = () => {
                                 dispatch(bookmarkPostAction(post?.id))
                             }
                         }>
-                            {post?.numMarks?.map((users) =>  users) == log ? (
+                            {post?.numMarks?.map((users) =>  users) == id ? (
                                 <BookmarkIcon className="w-6  ml-5 fill-red-500 stroke-0"/>
                             ) :(
                                 <BookmarkIcon className="w-6  ml-5"/>

@@ -181,34 +181,43 @@ const MarketCrypto =  () =>{
                                
                                 <AccordionItemPanel>
                                 <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
-                                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                    {values?.market_cap_change_percentage_24h < 0 ? (
-                                        <div className="flex items-center ml-auto">
-                                            <p className="text-red-500 font-bold">{values?.market_cap_change_percentage_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-                                            <TrendingDownIcon className="w-4 stroke-red-500 ml-auto"/>
-                                        </div>
-                                    ):(
-                                        <div className="flex items-center ml-auto">
-                                            <p className="text-green-500 font-bold">{values?.market_cap_change_percentage_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-                                            <TrendingUpIcon className="w-4 stroke-green-500 ml-auto"/>
-                                        </div>
-                                    )}
-                                
+                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                        {values?.market_cap_change_percentage_24h < 0 ? (
+                                            <div className="flex items-center ml-auto">
+                                                <p className="text-red-500 font-bold">{values?.market_cap_change_percentage_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
+                                                <TrendingDownIcon className="w-4 stroke-red-500 ml-auto"/>
+                                            </div>
+                                        ):(
+                                            <div className="flex items-center ml-auto">
+                                                <p className="text-green-500 font-bold">{values?.market_cap_change_percentage_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
+                                                <TrendingUpIcon className="w-4 stroke-green-500 ml-auto"/>
+                                            </div>
+                                        )}
+                                    
 
-                                </td>
-                                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                    {values?.low_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-                                </td>
-                                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                    {values?.high_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-                                </td>
-                                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                    {values?.total_volume.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-                                </td>
-                                <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                    {values?.market_cap.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-                                </td>
+                                    </td>
                                 </tr>
+                                <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
+                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                        {values?.low_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                    </td>
+                                </tr>
+                                <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
+                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                        {values?.high_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                    </td>
+                                </tr>
+                                <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
+                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                        {values?.total_volume.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                    </td>
+                                </tr>
+                                <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
+                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                        {values?.market_cap.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                                    </td>
+                                </tr>
+                                
                                 </AccordionItemPanel>
                                 
                             </AccordionItem>

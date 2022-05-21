@@ -130,7 +130,7 @@ const MarketCrypto =  () =>{
             </div>
             
             <div className="overflow:hidden mx-2 block lg:hidden">
-            <Accordion>
+     
                 <table className="min-w-full">
                     <thead className="bg-white border">
                         <tr>
@@ -153,7 +153,7 @@ const MarketCrypto =  () =>{
                             <h1>No values Found</h1>
                         ): (
                             marketList?.slice(0, 100).map(values => (
-                                
+                                <Accordion>
                                 <AccordionItem>
                                     <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
                                     <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -223,11 +223,12 @@ const MarketCrypto =  () =>{
                                 </AccordionItemPanel>
                                 
                             </AccordionItem>
+                            </Accordion>
                             ))
                         )}
                     </tbody>
                 </table>
-            </Accordion>
+            
               
         
             </div>

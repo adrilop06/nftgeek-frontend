@@ -131,7 +131,7 @@ const MarketCrypto =  () =>{
             
             <div className="overflow:hidden mx-2 block lg:hidden">
      
-                <table className="min-w-full">
+                <table className="max-w-full">
                     <thead className="bg-white border">
                         <tr>
                         <th scope="col" className="text-sm font-bold text-black px-1 py-4 text-left">
@@ -185,7 +185,7 @@ const MarketCrypto =  () =>{
                                 <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
                                     <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                         {values?.market_cap_change_percentage_24h < 0 ? (
-                                            <div className="flex items-center ml-auto">
+                                            <div className="flex items-center">
                                                 <p className="text-red-500 font-bold">24%: {values?.market_cap_change_percentage_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
                                                 <TrendingDownIcon className="w-4 stroke-red-500 ml-auto"/>
                                             </div>

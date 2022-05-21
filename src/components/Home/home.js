@@ -92,7 +92,7 @@ export default function Home  () {
                                     <p className="text-gray-600"><DateFormatter date={post?.createdAt}/></p>
                                 </div>
                                 <div className="flex items-center ml-auto mr-2">
-                                    <button onClick={()=>dispatch(postsLikes(post?.id))}>
+                                    <button onClick={()=>dispatch(postsLikes(post?.id.toLowerCase()))}>
                                 
                                     {post?.numLikes?.map((users) =>  users) == log ? (
                                         <HeartIcon className="w-6 ml-10 fill-red-500 stroke-0"/>
@@ -106,7 +106,7 @@ export default function Home  () {
                                     <button onClick={()=>
                                         {   
                                             dispatch(createBookmarkAction())
-                                            dispatch(bookmarkPostAction(post?._id))
+                                            dispatch(bookmarkPostAction(post?._id.toLowerCase()))
                                         }
                                         }>
                                     {post?.numMarks?.map((users) =>  users) == log ? (

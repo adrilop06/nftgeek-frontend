@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import {HeartIcon, ChatAltIcon, BookmarkIcon } from '@heroicons/react/outline'
 import { useDispatch, useSelector } from "react-redux";
-import { postsLikes, bookmarkPostAction, fetchPostsUserAction} from "../../../redux/slices/posts/postSlices";
-import { Link, useParams } from 'react-router-dom';
+import { postsLikes, bookmarkPostAction} from "../../../redux/slices/posts/postSlices";
+import { Link} from 'react-router-dom';
 import {createBookmarkAction } from '../../../redux/slices/bookmark/bookmarkSlices';
 import DateFormatter from '../../../utils/DateFormatter';
-import { fetchUserAction } from '../../../redux/slices/users/userSlices';
+
 
 const PostList = ({profile}) => {
 
@@ -15,8 +15,8 @@ const PostList = ({profile}) => {
 
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(fetchPostsUserAction(profile?._id));
-    }, [dispatch, likes, mark]);
+        dispatch(postsLikes());
+    }, [dispatch, likes]);
  
 
     return (

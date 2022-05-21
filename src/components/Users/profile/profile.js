@@ -15,8 +15,7 @@ const Profile =() => {
         userProfile, loading, appErr, serverErr
     } = user;
     
-    const post = useSelector(state => state?.post);
-    const {likes, mark}= post;
+
 
     const { id } = useParams();
 
@@ -24,7 +23,7 @@ const Profile =() => {
     
     useEffect(() => {
         dispatch(fetchUserAction(id))
-    }, [id, dispatch, likes, mark]);
+    }, [id, dispatch]);
     
     const [openTab, setOpenTab] = React.useState(1);
 

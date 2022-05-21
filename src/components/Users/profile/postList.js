@@ -15,11 +15,9 @@ const PostList = ({profile}) => {
 
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(postsLikes());
-    }, [dispatch, likes]);
-    useEffect(() => {
-        dispatch(bookmarkPostAction());
-    }, [dispatch, mark]);
+        dispatch(fetchPostsUserAction(profile?._id));
+    }, [dispatch, likes, mark]);
+ 
 
     return (
         <>  

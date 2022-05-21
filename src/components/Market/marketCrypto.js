@@ -157,10 +157,12 @@ const MarketCrypto =  () =>{
                                 <h1>No values Found</h1>
                             ): (
                                 marketList?.slice(0, 100).map(values => (
-                                    <Accordion>
-                                    <AccordionItem>
-                                        <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
-                                       
+                                    <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
+                    
+                                        
+                                        <td className="px-4 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                            
+                                        </td>
                                         
                                         <td className="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap">
                                             <div className="flex items-center ml-auto">
@@ -174,10 +176,10 @@ const MarketCrypto =  () =>{
                                             {values?.current_price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                         </td>
                                     
-                                        </tr>
+                                        
                                     
                                 
-                                    <AccordionItemPanel>
+                
                                     <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
                                         <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                             {values?.market_cap_change_percentage_24h < 0 ? (
@@ -215,11 +217,8 @@ const MarketCrypto =  () =>{
                                             <p> Valor mercado: {values?.market_cap.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
                                         </td>
                                     </tr>
-                                    
-                                    </AccordionItemPanel>
-                                    
-                                </AccordionItem>
-                                </Accordion>
+                                    </tr>
+
                                 ))
                             )}
                         </tbody>

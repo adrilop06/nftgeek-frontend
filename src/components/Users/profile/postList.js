@@ -9,6 +9,21 @@ import { fetchUserAction } from '../../../redux/slices/users/userSlices';
 
 const PostList = ({profile}) => {
 
+   
+
+
+    const dispatch = useDispatch();
+
+
+
+
+
+    
+    /*
+    useEffect(() => {
+        dispatch(fetchPostsUserAction(log))
+    }, [ dispatch, ]);
+*/
     return (
         <>  
 

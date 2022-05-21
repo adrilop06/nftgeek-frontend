@@ -11,7 +11,10 @@ import DateFormatter from '../../../utils/DateFormatter';
 
 const Profile =() => {
    
-    
+    const user = useSelector(state => state?.users);
+    const { 
+        userProfile, loading, appErr, serverErr
+    } = user;
     
 
     const { id } = useParams();
@@ -25,10 +28,7 @@ const Profile =() => {
     const post = useSelector(state => state?.post);
     const {likes, mark}= post;
 
-    const user = useSelector(state => state?.users);
-    const { 
-        userProfile, loading, appErr, serverErr
-    } = user;
+
     
     const [openTab, setOpenTab] = React.useState(1);
 

@@ -37,7 +37,7 @@ const MarketCrypto =  () =>{
             </div>
         ):(
 
-        <div className="flex flex-col max-w-7xl mx-auto">
+        <div className="flex flex-col max-w-2xl lg:max-w-7xl mx-auto">
             <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 hidden lg:block">
                 <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
                 <div className="overflow-hidden">

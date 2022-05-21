@@ -32,7 +32,8 @@ const PostList = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2 mb-5">
             {postUser?.length <= 0 ? (
                 <h1 className="text-lg text-center">Tu registro de publicaciones esta vacío</h1>
-            ) :(
+            ) : postUser?.user === log 
+            (
                 postUser?.map(post => (
             <div key={post?._id} className="flex flex-col col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 shadow-lg rounded-lg pb-2 mt-10">
                 <Link to={`/posts/${post?.id}`}>

@@ -24,7 +24,11 @@ const InsidePost = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchInsidePostAction(id))
-    }, [id, dispatch, likes, mark, commentCreated, commentDeleted]);
+    }, [id, dispatch, likes, mark]);
+
+    useEffect(() => {
+        dispatch(CreateComments())
+    }, [commentCreated, commentDeleted]);
 
    
     
@@ -176,9 +180,7 @@ const InsidePost = () => {
             )}
             
            {/*comments */}
-            <div className=" bg-white overflow-hidden">
-                <CommentList comments={postContain?.comments}></CommentList>
-            </div>
+          
             
      
             {/*Create comments component */}

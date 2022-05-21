@@ -276,7 +276,7 @@ export const postsLikes = createAsyncThunk(
       },
     };
     try {
-      const {data} = await axios.put(`${mainUrl}/api/posts/likes`, postID, config);
+      const {data} = await axios.put(`${mainUrl}/api/posts/likes`, {postID}, config);
       return data;
     } catch (error) {
       if(!error?.response) throw error;

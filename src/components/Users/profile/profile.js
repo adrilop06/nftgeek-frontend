@@ -1,5 +1,5 @@
 import React from "react";
-import { BookmarkIcon, ChatAltIcon, ChatIcon } from "@heroicons/react/outline";
+import { BookmarkIcon, ChatAltIcon, HeartIcon, ChatAltIcon, BookmarkIcon } from "@heroicons/react/outline";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
@@ -7,7 +7,8 @@ import { fetchUserAction } from "../../../redux/slices/users/userSlices";
 import PostList from "./postList";
 import BookmarkList from "./bookmarkList";
 import DateFormatter from '../../../utils/DateFormatter';
-
+import {createBookmarkAction } from '../../../redux/slices/bookmark/bookmarkSlices';
+import { postsLikes, bookmarkPostAction} from "../../../redux/slices/posts/postSlices";
 
 const Profile =() => {
     const user = useSelector(state => state?.users);
@@ -17,11 +18,16 @@ const Profile =() => {
     
     const { id } = useParams();
 
+    const post = useSelector(state => state?.post);
+    const { 
+        likes, mark
+    } = post;
+
     const dispatch = useDispatch();
     
     useEffect(() => {
         dispatch(fetchUserAction(id))
-    }, [id, dispatch]);
+    }, [id, dispatch, likes, mark]);
     
     const [openTab, setOpenTab] = React.useState(1);
 

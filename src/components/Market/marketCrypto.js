@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchMarketAction } from "../../redux/slices/coinmarket/coinmarketSlices";
-import {TrendingDownIcon, TrendingUpIcon} from '@heroicons/react/outline';
+import {TrendingDownIcon, TrendingUpIcon, ChevronDownIcon, ChevUpIcon} from '@heroicons/react/outline';
 import {
     Accordion,
     AccordionItem,
@@ -75,7 +75,7 @@ const MarketCrypto =  () =>{
                         {appErr || serverErr ? (
                         <h1>Err</h1>
                         ) : marketList?.lenght <= 0 ? (
-                        <h1>No Post Found</h1>
+                        <h1>No Values Found</h1>
                         ): (
                             marketList?.slice(0, 100).map(values => (
                         <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
@@ -134,13 +134,13 @@ const MarketCrypto =  () =>{
                 <table className="min-w-full">
                     <thead className="bg-white border">
                         <tr>
-                        <th scope="col" className="text-sm font-bold text-black px-6 py-4 text-left">
+                        <th scope="col" className="text-sm font-bold text-black px-2 py-4 text-left">
                             Nº
                         </th>
-                        <th scope="col" className="text-sm font-bold text-black px-6 py-4 text-left">
+                        <th scope="col" className="text-sm font-bold text-black px-2 py-4 text-left">
                             Criptomoneda
                         </th>
-                        <th scope="col" className="text-sm font-bold text-black px-6 py-4 text-left">
+                        <th scope="col" className="text-sm font-bold text-black px-2 py-4 text-left">
                             Precio
                         </th>
                         </tr>
@@ -150,22 +150,22 @@ const MarketCrypto =  () =>{
                         {appErr || serverErr ? (
                             <h1>Err</h1>
                         ) : marketList?.lenght <= 0 ? (
-                        <h1>No Post Found</h1>
+                            <h1>No values Found</h1>
                         ): (
                             marketList?.slice(0, 100).map(values => (
                                 
                                 <AccordionItem>
-                                     <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
+                                    <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
                                     <AccordionItemHeading>
                                         <AccordionItemButton>
-                                            What harsh truths do you prefer to ignore?
+                                        <td className="px-2 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                            <ChevronDownIcon className="w-4 stroke-green-500 ml-auto"></ChevronDownIcon>{values?.market_cap_rank}
+                                        </td>
                                         </AccordionItemButton>
                                     </AccordionItemHeading>
                                    
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        {values?.market_cap_rank}
-                                    </td>
-                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    
+                                    <td className="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap">
                                         <div className="flex items-center ml-auto">
                                             <img
                                             className="w-6 mr-4"
@@ -173,13 +173,14 @@ const MarketCrypto =  () =>{
                                             {values?.name}
                                         </div>
                                     </td>
-                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <td className="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap">
                                         {values?.current_price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                     </td>
-                        
+                                </tr>
                             
                                
                                 <AccordionItemPanel>
+                                <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
                                 <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                     {values?.market_cap_change_percentage_24h < 0 ? (
                                         <div className="flex items-center ml-auto">
@@ -207,8 +208,9 @@ const MarketCrypto =  () =>{
                                 <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                     {values?.market_cap.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                 </td>
-                                </AccordionItemPanel>
                                 </tr>
+                                </AccordionItemPanel>
+                                
                             </AccordionItem>
                             ))
                         )}

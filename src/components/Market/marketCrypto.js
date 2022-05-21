@@ -129,7 +129,7 @@ const MarketCrypto =  () =>{
                 </div>
             </div>
             
-            <div className="overflow:hidden mx-2 block lg:hidden">
+            <div className="overflow:hidden max-w-full mx-2 block lg:hidden">
      
                 <table className="max-w-full">
                     <thead className="bg-white border">

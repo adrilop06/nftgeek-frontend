@@ -138,13 +138,10 @@ const MarketCrypto =  () =>{
                     <table className="max-w-full">
                         <thead className="bg-white border">
                             <tr>
-                            <th scope="col" className="text-sm font-bold text-black px-1 py-4">
-                                Nº
-                            </th>
-                            <th scope="col" className="text-sm font-bold text-black px-1 py-4 ">
+                            <th scope="col" className="text-sm font-bold text-black px-2 py-4 ">
                                 Criptomoneda
                             </th>
-                            <th scope="col" className="text-sm font-bold text-black px-1 py-4 ">
+                            <th scope="col" className="text-sm font-bold text-black px-2 py-4 ">
                                 Precio
                             </th>
                             </tr>
@@ -158,10 +155,7 @@ const MarketCrypto =  () =>{
                             ): (
                                 marketList?.slice(0, 100).map(values => (
                                     <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
-                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                        {values?.market_cap_rank}
-                                    </td>
-                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <td className="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap">
                                         <div className="flex items-center ml-auto">
                                             <img
                                             className="w-6 mr-4"
@@ -169,7 +163,7 @@ const MarketCrypto =  () =>{
                                             {values?.name}
                                         </div>
                                     </td>
-                                    <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                                    <td className="text-sm text-gray-900 font-light px-2 py-4 whitespace-nowrap">
                                         {values?.current_price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
                                     </td>
                                 </tr>

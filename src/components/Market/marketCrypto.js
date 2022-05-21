@@ -133,18 +133,18 @@ const MarketCrypto =  () =>{
                 
 
             <div className="overflow:hidden max-w-full mx-2 block lg:hidden">
-                <div className="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                <div className="py-2 inline-block  sm:px-6 lg:px-8">
                 <div className="overflow-hidden">
                     <table className="max-w-full">
                         <thead className="bg-white border">
                             <tr>
-                            <th scope="col" className="text-sm font-bold text-black px-1 py-4 text-left">
+                            <th scope="col" className="bg-red-500 text-sm font-bold text-black px-1 py-4">
                                 Nº
                             </th>
-                            <th scope="col" className="text-sm font-bold text-black px-1 py-4 text-left">
+                            <th scope="col" className="text-sm font-bold text-black px-1 py-4 ">
                                 Criptomoneda
                             </th>
-                            <th scope="col" className="text-sm font-bold text-black px-1 py-4 text-left">
+                            <th scope="col" className="text-sm font-bold text-black px-1 py-4 ">
                                 Precio
                             </th>
                             </tr>

@@ -196,28 +196,8 @@ const MarketCrypto =  () =>{
                                         
 
                                         </td>
-                                    </tr>
-                                    <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
-                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <p> Mas bajo 24h: {values?.low_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-                                        </td>
-                                    </tr>
-                                    <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
-                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <p> Mas alto 24h: {values?.high_24h.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-                                        </td>
-                                    </tr>
-                                    <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
-                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <p> Valor 24h: {values?.total_volume.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-                                        </td>
-                                    </tr>
-                                    <tr key={values?.id} className="bg-white border-b transition duration-300 ease-in-out hover:bg-blue-100">
-                                        <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                            <p> Valor mercado: {values?.market_cap.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
-                                        </td>
-                                    </tr>
-                                    </tr>
+                                   </tr>
+                                   </tr>
 
                                 ))
                             )}

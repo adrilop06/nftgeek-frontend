@@ -129,7 +129,7 @@ const MarketCrypto =  () =>{
                 </div>
             </div>
             
-            <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 block lg:hidden">
+            <div className="overflow:hidden sm:-mx-6 lg:-mx-8 block lg:hidden">
             <Accordion>
                 <table className="min-w-full">
                     <thead className="bg-white border">

@@ -192,7 +192,7 @@ export default function Home  () {
                 ) :(
                 postList?.slice(0, 4).map((post, n) => (                
                     <div key={post.id} className="flex mt-5 shadow-lg rounded-lg pb-2">
-                        <span className="text-myblue-300 font-bold text-3xl ml-2 mr-4 mt-3">
+                        <span className="text-myblue-100 font-bold text-3xl ml-2 mr-4 mt-3">
                             <h2>0{n+1}</h2>
                         </span>
                         <div className="w-full">

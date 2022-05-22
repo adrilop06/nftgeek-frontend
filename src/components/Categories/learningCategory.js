@@ -45,7 +45,7 @@ export default function LearningCategory() {
                             {post?.tag}
                         </Link>
                         <Link to={`/posts/${post?.id}`}>
-                            <h2 href="#" className="text-gray-900 m-2 font-bold text-lg hover:text-indigo-600 transition duration-500 ease-in-out line-clamp-2">{post?.title} </h2>
+                            <h2 href="#" className="text-gray-900 m-2 font-bold text-lg hover:text-myblue-300 transition duration-500 ease-in-out line-clamp-2">{post?.title} </h2>
                         </Link>
                         <p className="text-gray-700 text-xs m-2 line-clamp-5">{post?.body}</p>
                     </div>

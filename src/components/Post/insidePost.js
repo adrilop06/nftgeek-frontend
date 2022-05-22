@@ -32,7 +32,7 @@ const InsidePost = () => {
     //chech the user id
     const users = useSelector(state => state.users);
     const {
-        userAuth: { _id },
+        userAuth
     } = users;
     var authorPost = null;
     if(users.userAuth != null){

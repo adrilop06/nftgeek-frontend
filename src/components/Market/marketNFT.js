@@ -158,7 +158,7 @@ const MarketNFT = () =>{
                                 <h1>No values Found</h1> 
                             ): (
                                 valueList?.slice(0, 100).map(values => (
-                                        <AccordionItem key={values?.id} className="flex flex-col col-span-12">
+                                        <AccordionItem key={values?.rank} className="flex flex-col col-span-12">
                                             <div className="flex items-center mr-2 mb-4 pb-2 mt-4 border-b-2 ">
                                                 <div className="col-span-2 mr-4">
                                                     <AccordionItemHeading>

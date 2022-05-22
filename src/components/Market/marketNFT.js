@@ -125,7 +125,7 @@ const MarketNFT = () =>{
                             {values?.market_value_one_day} $
                             </div>
                             <div className="col-span-3 text-sm text-gray-600">
-                            {values?.market_value_one_day_coin} $
+                            {values?.market_value_one_day_coin} 
                             </div>
                         </div>
                         
@@ -250,8 +250,8 @@ const MarketNFT = () =>{
                                                 <td>
                                                 Valor moneda 1d
                                                 </td>
-                                                <td className="text-sm text-gray-900 font-light px-6 py-4 flex items-center">
-                                                        <p>  {values?.market_value_one_day_coin.toLocaleString(undefined, { maximumFractionDigits: 2 })} $</p>
+                                                <td className="text-sm text-gray-600 font-light px-6 py-4 flex items-center">
+                                                        <p>  {values?.market_value_one_day_coin.toLocaleString(undefined, { maximumFractionDigits: 2 })}</p>
                                                     </td>
                                                 </tr>
                                             

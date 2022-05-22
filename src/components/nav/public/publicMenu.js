@@ -32,7 +32,7 @@ export default function PublicMenu() {
 
     if (title.trim()) {
 
-      navigate(`/posts/results/${title.title}`);
+      navigate(`/posts/results/${title}`);
       refreshPage();
     } else {
       navigate("/");

@@ -101,7 +101,7 @@ export default function PublicMenu() {
                   </div>
                 </div>
               </div>
-              <div className="hidden md:flex ">
+              <div className="hidden md:flex">
               <form onSubmit={inputHandler}>
                 <div className="flex items-center">
                 <span className="sr-only">Buscar</span>

@@ -177,7 +177,7 @@ export const fetchPostsUserAction = createAsyncThunk(
     };
     try {
     
-      const { data } = await axios.get(`${mainUrl}/api/users/profile/posts?user=${userAuth?._id}`, config);
+      const { data } = await axios.get(`${mainUrl}/api/users/${userAuth?._id}`, config);
         return data;
       
     } catch (error) {
@@ -235,7 +235,7 @@ export const fetchPostsTagAction = createAsyncThunk(
   }
 );
 
-//fetch posts by tag
+//fetch posts search
 export const fetchPostsSearchAction = createAsyncThunk(
   `post/results`,
   async (title, { rejectWithValue, getState, dispatch }) => {

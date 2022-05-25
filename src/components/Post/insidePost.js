@@ -75,7 +75,7 @@ const InsidePost = () => {
                         </h2>
                         <div className="w-full mx-auto">
                         <div className="mb-6 text-xl text-black">
-                            <p style={"white-space: pre-wrap"}>
+                            <p >
                             {postContain?.body}
                             </p>
 

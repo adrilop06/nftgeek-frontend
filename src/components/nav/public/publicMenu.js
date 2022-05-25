@@ -119,7 +119,7 @@ export default function PublicMenu() {
                 </div>
                 </form>
                   {/*Login and registrer*/}
-
+                  <div className="flex items-center ml-auto mr-2">
                     <div className="flex-shrink-0">
                       <Link
                         to="/login"
@@ -137,7 +137,7 @@ export default function PublicMenu() {
                         <span>Registro</span>
                       </Link>
                     </div>
-
+                  </div>
                 </div>
             </div>
           </div>

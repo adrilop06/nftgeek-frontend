@@ -77,7 +77,7 @@ export const updateBookmarkAction = createAsyncThunk(
     };
     //http call
     try {
-      const { data } = await axios.get(`${mainUrl}/api/bookmark`, config);
+      const { data } = await axios.get(`${mainUrl}/api/bookmark/${userAuth?._id}`, config);
       return data;
     } catch (error) {
       if (!error?.response) {

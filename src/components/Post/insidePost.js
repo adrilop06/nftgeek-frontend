@@ -7,7 +7,7 @@ import CreateComments from "../Comments/createComments";
 import CommentList from "../Comments/commentList";
 import { createBookmarkAction, updateBookmarkAction } from "../../redux/slices/bookmark/bookmarkSlices";
 import DateFormatter from '../../utils/DateFormatter';
-
+import '../../styles/style.css';
 
 const InsidePost = () => {
     //select the information from post
@@ -75,7 +75,7 @@ const InsidePost = () => {
                         </h2>
                         <div className="w-full mx-auto">
                         <div className="mb-6 text-xl text-black">
-                            <p >
+                            <p className="paragraph-text">
                             {postContain?.body}
                             </p>
 

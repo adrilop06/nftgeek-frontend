@@ -261,7 +261,7 @@ export default function Home  () {
                                 <Link to={`/posts/${post?.id}`}>
                                     <h3 href="#" className="text-gray-900 font-medium hover:text-myblue-300  line-clamp-2">{post?.title}</h3>
                                 </Link>
-                                <p className="text-gray-700 text-xs mt-2 mr-2 line-clamp-2 md:line-clamp-4">{post?.body}</p>
+                                <p className="text-gray-700 text-xs mt-2 mr-2 line-clamp-2 md:line-clamp-2">{post?.body}</p>
                                 <div className="flex items-center mt-2 md:mt-12">
                                     <Link to={`/profile/${post?.user?.id}`}><img className="w-5 h-5 lg:w-10 lg:h-10 rounded-full mr-4" src={post?.user?.photo} alt="Users photo"/></Link>
                                     <div className="text-xs lg:text-base w-100 flex-1">

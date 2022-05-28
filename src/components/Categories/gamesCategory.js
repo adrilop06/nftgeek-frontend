@@ -30,8 +30,16 @@ export default function GameCategory() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-9 grid grid-cols-1 sm:grid-cols-12 "></div>
-            {postListGames?.length <= 0 ? (
-                <h1 className="text-lg text-center">Tu registro de publicaciones esta vacío</h1>
+            {loading ? (
+              <div className="h-screen">
+                <div className="flex justify-center items-center w-full h-full">
+                    <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+              </div>
+            ): postListGames?.length <= 0 ? (
+                <h1 className="text-lg text-center">No existen publicaciones en esta cetegoría</h1>
             ) : (
                 postListGames?.map(post => (
               

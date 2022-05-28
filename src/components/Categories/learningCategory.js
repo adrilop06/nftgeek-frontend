@@ -30,7 +30,16 @@ export default function LearningCategory() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-9 grid grid-cols-1 sm:grid-cols-12 "></div>
-            {postListLearning?.length <= 0 ? (
+            {loading ? (
+              <div className="h-screen">
+                <div className="flex justify-center items-center w-full h-full">
+                    <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+              </div>
+            ): 
+            postListLearning?.length <= 0 ? (
                 <h1 className="text-lg text-center">Tu registro de publicaciones esta vacío</h1>
             ) : (
                 postListLearning?.map(post => (

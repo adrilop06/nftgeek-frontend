@@ -31,7 +31,7 @@ export default function GameCategory() {
         <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-9 grid grid-cols-1 sm:grid-cols-12 "></div>
             {loading ? (
-              <div className="h-screen">
+              <div className="col-span-12">
                 <div className="flex justify-center items-center w-full h-full">
                     <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
                         <span className="visually-hidden">Loading...</span>

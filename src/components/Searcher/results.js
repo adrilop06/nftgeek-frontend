@@ -45,7 +45,7 @@ const Results = () => {
             {appErr || serverErr ? (
             <h1>Err</h1>
             ) : loading ? (
-                <div className="h-screen">
+                <div className="col-span-12">
                    <div className="flex justify-center items-center w-full h-full">
                        <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
                            <span className="visually-hidden">Loading...</span>

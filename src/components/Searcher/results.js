@@ -44,7 +44,16 @@ const Results = () => {
             {/*First card*/}
             {appErr || serverErr ? (
             <h1>Err</h1>
-            ) : postResults?.length <= 0 ? (
+            ) : loading ? (
+                <div className="h-screen">
+                   <div className="flex justify-center items-center w-full h-full">
+                       <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                           <span className="visually-hidden">Loading...</span>
+                       </div>
+                   </div>
+               </div>
+           ): 
+            postResults?.length <= 0 ? (
                 <div className=" col-span-12 ">
                     <h1 className="mx-auto h-screen text-2xl text-center ">No Post Found</h1>
                 </div>

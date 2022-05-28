@@ -230,7 +230,13 @@ useEffect(() => {
           (
             <h1>Err</h1>
           ) : loading ? (
-            <h1>cargando</h1>
+            <div className="h-screen">
+                <div className="flex justify-center items-center w-full h-full">
+                    <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
           ): (
           <div className="max-w-screen-2xl mx-auto pt-10 sm:p-10 md:p-10 relative">
               <div className="grid grid-cols-1 sm:grid-cols-12 ">

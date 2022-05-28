@@ -84,12 +84,12 @@ const MarketCrypto =  () =>{
                             {values?.market_cap_rank}
                         </td>
                         <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                            <div className="flex items-center ml-auto">
+                            <Link to={`/market/coin/${values?.id}`} className="flex items-center ml-auto">
                                 <img
                                 className="w-6 mr-4"
                                 src={values?.image}></img>
                                 {values?.name}
-                            </div>
+                            </Link>
                         </td>
                         <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                             {values?.current_price.toLocaleString(undefined, { maximumFractionDigits: 2 })} $

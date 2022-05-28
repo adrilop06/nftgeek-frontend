@@ -17,6 +17,7 @@ import News from "./components/News/news";
 import Results from "./components/Searcher/results";
 import Footer from "./components/nav/footer";
 import About from "./components/About/about";
+import InsideCoin from "./components/Market/insideCoin";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path='/news' element={<News/>} component={News} />
         <Route path='/posts/results/:title' element={<Results/>} component={Results}/>
         <Route path='/about-us' element={<About/>} component={About}/>
+        <Route path='/market/coin/:id' element={<InsideCoin/>} component={InsideCoin}/>
         <Route
           path="/profile/:id"
           element={

@@ -138,7 +138,7 @@ export default function Home  () {
                             <div className="w-full mr-2">
                                 <Link to={`/tag/${post?.slug}`} className="text-myblue-100 text-xs">{post?.tag}</Link>
                                 <Link to={`/posts/${post?.id}`}>
-                                    <h2 href="#" className="text-gray-900 font-medium hover:text-myblue-300 line-clamp-2">{post?.title}</h2>
+                                    <h2 href="#" className="text-gray-900 font-bold font-medium hover:text-myblue-300 line-clamp-2">{post?.title}</h2>
                                 </Link>
                                 <div className="flex items-center mt-2">
                                     <Link to={`/profile/${post?.user?.id}`}><img className="w-5 h-5 rounded-full mr-4" src={post?.user.photo} alt="User photo"/></Link>
@@ -197,7 +197,7 @@ export default function Home  () {
                         </span>
                         <div className="w-full">
                             <Link to={`/tag/${post?.slug}`} className="text-myblue-100 text-xs mb-1">{post?.tag}</Link>
-                            <Link to={`/posts/${post?.id}`} className="text-gray-900 font-medium hover:text-myblue-300  md:lg:line-clamp-3 lg:line-clamp-2">{post?.title}</Link>
+                            <Link to={`/posts/${post?.id}`} className="text-gray-900 font-bold font-medium hover:text-myblue-300  md:lg:line-clamp-3 lg:line-clamp-2">{post?.title}</Link>
                             <div className="flex items-center mt-2">
                                 <div className="text-xs w-100 flex-1">
                                     <Link to={`/profile/${post?.user?.id}`} className="text-gray-900">{post?.user?.userName}</Link>
@@ -259,7 +259,7 @@ export default function Home  () {
                                     className="text-myblue-100 text-xs md:text-lg">{post?.tag}
                                 </Link>
                                 <Link to={`/posts/${post?.id}`}>
-                                    <h3 href="#" className="text-gray-900 font-medium hover:text-myblue-300  line-clamp-2">{post?.title}</h3>
+                                    <h3 href="#" className="text-gray-900 font-bold font-medium hover:text-myblue-300  line-clamp-2">{post?.title}</h3>
                                 </Link>
                                 <p className="text-gray-700 text-xs mt-2 mr-2 line-clamp-2 md:line-clamp-2">{post?.body}</p>
                                 <div className="flex items-center mt-2 md:mt-12">
@@ -314,7 +314,7 @@ export default function Home  () {
                     ) :(
                     tagList?.slice(0, 10).map(tag => (  
                         <div key={tag.id} className="w-fit flex mt-5 shadow-lg rounded-lg p-2 ml-2">
-                            <Link to={`/tag/${tag?.slug}`} className="text-myblue-100 text-xs mb-1">{tag?.name}</Link>
+                            <Link to={`/tag/${tag?.slug}`} className="text-myblue-100 font-bold text-xs mb-1">{tag?.name}</Link>
                         </div>
                     ))
                     )}

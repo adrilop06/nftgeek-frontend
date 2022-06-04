@@ -195,8 +195,8 @@ export default function Home  () {
                         <span className="text-myblue-100 font-bold text-3xl ml-2 mr-4 mt-3">
                             <h2>0{n+1}</h2>
                         </span>
-                        <div className="w-full">
-                            <Link to={`/tag/${post?.slug}`} className="text-myblue-100 text-xs mb-1 mr-10">{post?.tag}</Link>
+                        <div className="w-full mr-2">
+                            <Link to={`/tag/${post?.slug}`} className="text-myblue-100 text-xs mb-1">{post?.tag}</Link>
                             <Link to={`/posts/${post?.id}`} className="text-gray-900 font-bold hover:text-myblue-300  md:lg:line-clamp-3 lg:line-clamp-2">{post?.title}</Link>
                             <div className="flex items-center mt-2">
                                 <div className="text-xs w-100 flex-1">

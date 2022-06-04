@@ -240,7 +240,7 @@ const dispatch = useDispatch();
                   <button
                     onClick={()=> dispatch(logoutUserAction())}
                     href="/"
-                    className={classNames(active ? 'bg-myblue-100 text-white' : '', 'block px-4 py-2 text-sm text-left w-full text-gray-700')}
+                    className='bg-myblue-100 text-white'
                     >
                     Cerrar sesión
                     </button>

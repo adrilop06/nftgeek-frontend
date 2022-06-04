@@ -5,7 +5,7 @@ function CreatePostNoUser() {
 
   return (
 
-        <div className="w-full max-w-2xl py-20 mx-auto">
+        <div className="w-full h-full max-w-2xl py-20 mx-auto">
         <div className="mx-auto">
         <h2 className="w-100 p-10 w-full flex mt-50 font-bold items-center justify-center" >Necesitas estar registrado o logearte para crear tu publicación</h2>
             <div className="flex items-center justify-center py-8">

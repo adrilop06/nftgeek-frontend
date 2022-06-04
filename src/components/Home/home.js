@@ -68,7 +68,7 @@ export default function Home  () {
                     <h1>No Post Found</h1>
                     ): (
                     postListGames?.slice(0, 1).map(post => (
-                        <div key={post.id} className="flex flex-col col-span-12 md:col-span-6 lg:col-span-6 shadow-lg rounded-lg pb-2 mt-10 ">
+                        <div key={post?.id} className="flex flex-col col-span-12 md:col-span-6 lg:col-span-6 shadow-lg rounded-lg pb-2 mt-10 ">
                             <Link to={`/posts/${post?.id}`}>
                                 <div className="h-56 w-full bg-cover text-center overflow-hidden rounded-lg"  title="Woman holding a mug">
                                     <img className="w-full" src={post?.image}></img>
@@ -129,7 +129,7 @@ export default function Home  () {
                     <h1>No Post Found</h1>
                     ) :(
                     postListGames?.slice(1, 5).map(post => (
-                        <div key={post.id}  className="flex flex items-center shadow-lg rounded-lg mt-3">
+                        <div key={post?.id}  className="flex flex items-center shadow-lg rounded-lg mt-3">
                             <Link to={`/posts/${post?.id}`} href="#" className="inline-block mr-2">
                                 <div className="w-24 h-24 bg-cover bg-center" >
                                     <img className=" rounded-lg h-full"  src={post?.image}></img>
@@ -191,7 +191,7 @@ export default function Home  () {
                     <h1>No Post Found</h1>
                 ) :(
                 postList?.slice(0, 4).map((post, n) => (                
-                    <div key={post.id} className="flex mt-5 shadow-lg rounded-lg pb-2">
+                    <div key={post?.id} className="flex mt-5 shadow-lg rounded-lg pb-2">
                         <span className="text-myblue-100 font-bold text-3xl ml-2 mr-4 mt-3">
                             <h2>0{n+1}</h2>
                         </span>
@@ -248,7 +248,7 @@ export default function Home  () {
                   <h1>No Post Found</h1>
                 ): (
                   postListLearning?.slice(0, 4).map(post => (
-                    <div key={post.id} className="flex flex items-center shadow-lg rounded-lg mt-5 ">
+                    <div key={post?.id} className="flex flex items-center shadow-lg rounded-lg mt-5 ">
                             <Link to={`/posts/${post?.id}`} className="inline-block mr-2">
                                 <div className="w-24 h-24 md:w-48 md:h-48 bg-cover bg-center" >
                                     <img className=" rounded-lg w-full" src={post?.image}/>

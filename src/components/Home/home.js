@@ -95,9 +95,9 @@ export default function Home  () {
                                     <button onClick={()=>dispatch(postsLikes(post?.id))}>
                                 
                                     {post?.numLikes?.map((users) =>  users) == log ? (
-                                        <HeartIcon className="w-6 ml-10 fill-red-500 stroke-0"/>
-                                    ) :(
-                                        <HeartIcon className="w-6 ml-10"/>  
+                                            <HeartIcon className="w-6 ml-10  fill-red-500 stroke-0"/>
+                                        ) :(
+                                            <HeartIcon className="w-6 ml-10"/>  
                                     )}
                                     </button>
                                     <p className="text-black text-sm">{post?.numLikes?.length}</p>

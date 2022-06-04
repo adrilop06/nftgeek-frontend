@@ -64,7 +64,7 @@ const Profile =() => {
                     </div>
                     <div className="flex items-center">
                         <div className="text-sm ">
-                            <p className="text-black leading-none">Miembro desde: ~{"\n"} <DateFormatter date={userProfile?.createdAt}/></p>
+                            <text className="text-black leading-none">Miembro desde: {"\n"} <DateFormatter date={userProfile?.createdAt}/></text>
                         </div>
                         <div className="ml-auto">
                                 <p className="text-grey-dark ">{userProfile?.posts?.length} publicaciones</p>

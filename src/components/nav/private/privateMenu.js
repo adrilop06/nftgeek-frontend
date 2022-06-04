@@ -229,7 +229,7 @@ const dispatch = useDispatch();
                 {/*Login and registrer*/}
                 <div className="flex items-center justify-center text-white px-2 pt-2 font-medium">
                 <Link
-                    to="/profile"
+                    to={`/profile/${isLogin?._id}`}
                     type="button"
                     className="flex items-center justify-center text-white px-2 font-medium"
                 >
@@ -237,12 +237,13 @@ const dispatch = useDispatch();
                 </Link>
                 </div>
                 <div className="flex items-center justify-center text-white px-3 pt-6 font-medium">
-                    <Link
-                    to="/"
-                    className="flex items-center justify-center text-white px-3 font-medium"
+                  <button
+                    onClick={()=> dispatch(logoutUserAction())}
+                    href="/"
+                    className={classNames(active ? 'bg-myblue-100 text-white' : '', 'block px-4 py-2 text-sm text-left w-full text-gray-700')}
                     >
-                    <span>Logout</span>
-                    </Link>
+                    Cerrar sesión
+                    </button>
                 </div>
             </div>
             </Disclosure.Panel>

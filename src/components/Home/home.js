@@ -286,9 +286,9 @@ export default function Home  () {
                                         }
                                         }>
                                         {post?.numMarks?.map((users) => users) == log ? (
-                                            <BookmarkIcon className="w-6  ml-5 fill-red-500 stroke-0"/>
+                                            <BookmarkIcon className="w-4 lg:w-6  ml-5 fill-red-500 stroke-0"/>
                                         ) :(
-                                            <BookmarkIcon className="w-6  ml-5"/>
+                                            <BookmarkIcon className="w-4 lg:w-6  ml-5"/>
                                         )}
                                         </button>
                                     </div>

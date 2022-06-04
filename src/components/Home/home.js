@@ -271,9 +271,9 @@ export default function Home  () {
                                     <div className="flex items-center ml-auto mr-2">
                                         <button onClick={()=>dispatch(postsLikes(post?.id))}>
                                         {post?.numLikes?.map((users) => users) == log ? (
-                                            <HeartIcon className="lg:w-6 fill-red-500 stroke-0"/>
+                                            <HeartIcon className="w-4 lg:w-6 fill-red-500 stroke-0"/>
                                         ) :(
-                                            <HeartIcon className=" lg:w-6"/>  
+                                            <HeartIcon className="w-4 lg:w-6"/>  
                                         )}
                                         </button>
                                         <p className="text-black text-xs">{post?.numLikes?.length}</p>

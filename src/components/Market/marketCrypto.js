@@ -167,8 +167,12 @@ const MarketCrypto =  () =>{
                                                     <div className="flex items-center ml-auto">
                                                         <img
                                                         className="w-6 mr-4"
-                                                        src={values?.image}></img>
-                                                        {values?.name}
+                                                         <Link to={`/market/coin/${values?.id}`} className="flex items-center ml-auto">
+                                                            <img
+                                                            className="w-6 mr-4"
+                                                            src={values?.image}></img>
+                                                            {values?.name}
+                                                        </Link>
                                                     </div>
                                                 </div>
                                                 <div className="flex col-span-4 ml-auto">
